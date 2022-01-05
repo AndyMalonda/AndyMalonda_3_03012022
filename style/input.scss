@@ -1,9 +1,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
+html,
+body,
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    align-items: baseline;
+    object-fit: cover;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+// var
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$grey: #EDEDED;
+$light-grey: #F7F7F7;
+$dark-grey: #353535;
 
-body {
-    margin: 0;
+$mg-left-h2: 20px;
+$my-10: 10px auto;
+$py-20: 20px 0;
+
+// buttons
+
+.btn {
+    display: inline-block;
+    border-radius: 100px;
+    padding: 18px;
+
+    &__primary {
+        color: white;
+        background: linear-gradient(135deg, $color-primary, $color-secondary);
+    }
+
+    &__secondary {
+        margin: 15px auto;
+        width: 85%;
+        background: $light-grey;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+}
+
+// header
+
+header {
+    box-shadow: rgba(0, 0, 0, 0.363) 0px 15px 15px -15px;
+}
+
+.logo {
+    font-family: 'Shrikhand';
+
+    &__top {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    &__bottom {
+        margin: 30px;
+        font-size: 20px;
+    }
+}
+
+.position {
+    padding: 8px 0;
+    text-align: center;
+    background-color: $grey;
+}
+
+.slogan {
+    background-color: $light-grey;
+    text-align: center;
+    padding-bottom: 50px;
+
+    h2 {
+        font-weight: bold;
+        padding: $py-20;
+    }
+
+    p {
+        padding-bottom: 40px;
+    }
+}
+
+.container {
+    padding: $py-20;
+
+    h2 {
+        padding: $py-20;
+        margin-left: $mg-left-h2;
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card {
+            background: white;
+            width: 90%;
+            border-radius: 20px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+
+            img {
+                display: flex;
+                align-items: center;
+                height: 200px;
+                width: 100%;
+                border-radius: 20px 20px 0 0;
+            }
+
+        }
+    }
+}
+
+
+.restaurants {
+    background: $light-grey;
+}
+
+footer {
+    color: white;
+    background: $dark-grey;
+
+    .foot-container {
+        padding-top: 20px;
+
+        ul {
+            margin-left: 20px;
+            padding-left: 0;
+
+
+            li {
+                padding: 10px;
+            }
+        }
+    }
 }
