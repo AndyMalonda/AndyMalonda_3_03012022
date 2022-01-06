@@ -191,6 +191,18 @@ $rounded-top: 20px 20px 0 0;
                 height: 260px;
             }
 
+            .subcard {
+                width: 95%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: auto;
+
+                .card-heart {
+                    font-size: 26px;
+                }
+            }
+
             &__menu {
                 display: flex;
                 flex-direction: row;
@@ -226,7 +238,7 @@ $rounded-top: 20px 20px 0 0;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: 30px;
+                    font-size: 26px;
                     padding: 0 3%;
                     width: 10%;
                     height: 80px;
