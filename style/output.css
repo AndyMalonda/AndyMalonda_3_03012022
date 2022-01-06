@@ -12,6 +12,17 @@ body,
 a {
   text-decoration: none;
 }
+a:visited {
+  color: inherit;
+}
+
+.center-container {
+  text-align: center;
+}
+
+.bg-gray {
+  background: #F7F7F7;
+}
 
 .btn {
   display: inline-block;
@@ -21,6 +32,12 @@ a {
 .btn__primary {
   color: white;
   background: linear-gradient(135deg, #9356DC, #FF79DA);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.btn__primary:hover {
+  opacity: 90%;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  cursor: pointer;
 }
 .btn__secondary {
   margin: 15px auto;
@@ -29,8 +46,22 @@ a {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-header {
+.header__main-page {
   box-shadow: rgba(0, 0, 0, 0.363) 0px 15px 15px -15px;
+}
+.header__restaurant-page {
+  position: relative;
+  z-index: 1;
+}
+.header__restaurant-page a {
+  position: absolute;
+  top: 23px;
+  left: 25px;
+  font-size: 20px;
+}
+.header__restaurant-page img {
+  width: 100%;
+  height: 220px;
 }
 
 .logo {
@@ -40,7 +71,7 @@ header {
   text-align: center;
   padding: 10px 0;
 }
-.logo__bottom {
+.logo__footer {
   margin: 30px;
   font-size: 20px;
 }
@@ -71,30 +102,96 @@ header {
   padding: 20px 0;
   margin-left: 20px;
 }
+.container .menu-type {
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: #353535;
+}
 .container .cards-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 .container .cards-container .card {
   background: white;
-  width: 90%;
+  width: 100%;
   border-radius: 20px;
   margin: 20px auto;
   display: flex;
   align-items: center;
-  flex-direction: column;
 }
-.container .cards-container .card img {
+.container .cards-container .card__restaurant {
+  flex-direction: column;
+  height: 260px;
+}
+.container .cards-container .card__menu {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.container .cards-container .card__menu .menu-text {
+  padding: 0 5%;
+  margin-right: 0;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .cards-container .card__menu .menu-text h4,
+.container .cards-container .card__menu .menu-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.container .cards-container .card__menu .price {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 15%;
+  width: 10%;
+  transition: all 500ms ease-out;
+}
+.container .cards-container .card__menu .checkbox {
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  padding: 0 3%;
+  width: 10%;
+  height: 80px;
+  margin-right: -80px;
+  color: white;
+  background: transparent;
+  border-radius: 0px 15px 15px 0px;
+  transition: all 500ms ease-out;
+}
+.container .cards-container .card:hover > .checkbox {
+  background: #99E2D0;
+  transform: translateX(-80px);
+  transition: transform 500ms ease-out 50ms;
+  transform-origin: center;
+}
+.container .cards-container .card:hover > .checkbox > .fas {
+  transform: rotate(360deg);
+  transition: transform 500ms ease-out 50ms;
+}
+.container .cards-container .card:hover > .price {
+  transform: translateX(-80px);
+  transition: transform 500ms ease-out 50ms;
+}
+.container .cards-container img {
   display: flex;
   align-items: center;
   height: 200px;
   width: 100%;
   border-radius: 20px 20px 0 0;
-}
-
-.restaurants {
-  background: #F7F7F7;
 }
 
 footer {
@@ -110,6 +207,26 @@ footer .foot-container ul {
 }
 footer .foot-container ul li {
   padding: 10px;
+}
+
+.menu-section {
+  border-radius: 20px 20px 0 0;
+  background: #F7F7F7;
+  position: relative;
+  z-index: 2;
+  margin-top: -40px;
+}
+.menu-section .menu-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.menu-section .menu-header i {
+  font-size: 30px;
+  cursor: pointer;
+}
+.menu-section .menu-header i:hover {
+  fill: #FF79DA;
 }
 
 /*# sourceMappingURL=output.css.map */
