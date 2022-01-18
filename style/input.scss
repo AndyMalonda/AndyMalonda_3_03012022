@@ -286,7 +286,7 @@ $rounded-top: 20px 20px 0 0;
                     text-align: center;
                     margin-top: 20px;
                     margin-left: 30%;
-                    margin-right: 15%;
+                    margin-right: 40px;
                     width: 10%;
                     @include fade-out;
                 }
@@ -468,12 +468,12 @@ footer {
 @keyframes fade-in {
     0% {
         opacity: 0;
-        transform: scale(0);
+        transform: translateY(-30px);
     }
 
     100% {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 

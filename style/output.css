@@ -215,7 +215,7 @@ a:visited {
   text-align: center;
   margin-top: 20px;
   margin-left: 30%;
-  margin-right: 15%;
+  margin-right: 40px;
   width: 10%;
   transition: all 500ms ease-out;
 }
@@ -360,11 +360,11 @@ footer .foot-container ul li i {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: scale(0);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 .delay-1 {
